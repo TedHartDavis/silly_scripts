@@ -10,13 +10,7 @@ function kill()
       # Say the thing
       echo -e "bash: \e[31myou need to specify whom to kill\e[39m"
     else
-      # One argument
-      if [ -z $2 ]; then
-        "/usr/bin/kill" "$1"
-      else
-        # Two arguments
-        "/usr/bin/kill" "$1" "$2"
-      fi
+      "/usr/bin/kill" "$@"
     fi
   fi
 }
